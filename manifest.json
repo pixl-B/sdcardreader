@@ -1,0 +1,32 @@
+{
+  "id": "sdcard-fsaccess",
+  "name": "SD Card (FS Access)",
+  "blocks": [
+    {
+      "opcode": "pickCard",
+      "blockType": "Command",
+      "text": "pick SD-card root folder"
+    },
+    {
+      "opcode": "cardPicked",
+      "blockType": "Boolean",
+      "text": "SD-card picked?"
+    },
+    {
+      "opcode": "listFiles",
+      "blockType": "Reporter",
+      "text": "list files"
+    },
+    {
+      "opcode": "readFile",
+      "blockType": "Reporter",
+      "text": "read file [NAME]",
+      "arguments": {
+        "NAME": {
+          "type": "string",
+          "defaultValue": "test.txt"
+        }
+      }
+    }
+  ]
+}
